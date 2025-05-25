@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "e8e82c6c778a31dd",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e654275bc3f905a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3535badd252ac534",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tema 2 Introducción a concurrencia.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tema 2 Introducción a concurrencia"
+            }
+          },
+          {
+            "id": "ab3d62d948926687",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tema 3 Sincronización.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tema 3 Sincronización"
+            }
+          },
+          {
+            "id": "abaa31a69c26a1e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tema 2 Introducción a concurrencia.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tema 2 Introducción a concurrencia"
+            }
+          },
+          {
+            "id": "79db58225e5754d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tema 2 Introducción a concurrencia.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tema 2 Introducción a concurrencia"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "59d4948917358a82",
+    "type": "split",
+    "children": [
+      {
+        "id": "390fe7383bef0451",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e759383c8877f3e0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "5a13f83741232141",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "4b2a0793bcad436d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "93aa77f56d79a3d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "795af90a3894e135",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0956d874bfaac659",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Temas 11-13 Nvidia Cuda.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Temas 11-13 Nvidia Cuda"
+            }
+          },
+          {
+            "id": "70af9d8f7bb7a33c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Temas 11-13 Nvidia Cuda.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Temas 11-13 Nvidia Cuda"
+            }
+          },
+          {
+            "id": "7f8bd98ffa7d762b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "541f1cf04fe6e2e3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Temas 11-13 Nvidia Cuda.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Temas 11-13 Nvidia Cuda"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "79db58225e5754d9",
+  "lastOpenFiles": [
+    "Tema 1 Paralelismo.md",
+    "Tema 2 Introducción a concurrencia.md",
+    "Tema 3 Sincronización.md",
+    "JVM.md",
+    "Temas 11-13 Nvidia Cuda.md",
+    "Tema 10 Numba y Cython.md",
+    "files/Pasted image 20250524165759.png",
+    "files/Pasted image 20250523175729.png",
+    "files/Pasted image 20250523175344.png",
+    "files",
+    "files/Pasted image 20250523174203.png",
+    "files/Pasted image 20250523173808.png",
+    "Numba Cuda.md",
+    "files/Pasted image 20250523164921.png"
+  ]
+}
