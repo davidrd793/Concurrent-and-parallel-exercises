@@ -1,7 +1,7 @@
 Se correspondería al peor paradigma de programación paralela, la *memoria compartida*, en que el paralelismo es parcial y se ejecuta solo en las partes posibles, ya que muchos aspectos del programa se ejecutan secuencialmente por acceso a secciones críticas que solo un hilo puede gestionar a la vez. Este punto a medio camino del paralelismo se denomina `concurrencia`.
 ## Conceptos
 
-###### DIspositivos físicos
+###### Dispositivos físicos
 Estructura de una CPU:
 
 ![[Pasted image 20250523175344.png]]

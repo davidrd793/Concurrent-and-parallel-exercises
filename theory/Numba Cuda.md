@@ -1,4 +1,4 @@
-Este es el lanzamineto básico de un kernel a GPU:
+Este es el lanzamiento básico de un kernel a GPU:
 
 ``` python
 @cuda.jit #Decorador a la ufunc
@@ -17,7 +17,7 @@ increment_func[blocksPerGrid, threadsPerBlock](an_array)
 
 //Pendiente
 
-#### Uso de Strides y grids multidiimensionales
+#### Uso de Strides y grids multidimensionales
 
 **Stride**: división del trabajo requerido entre los threads. Dado un thread x y n threads, este realizara las tareas x, (n+1)x, (n+2)x... Hasta agotar la entrada.
 

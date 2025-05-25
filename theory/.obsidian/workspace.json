@@ -55,12 +55,20 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "JVM.md",
+=======
+                "file": "Tema 1 Paralelismo.md",
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< Updated upstream
               "title": "JVM"
+=======
+              "title": "Tema 1 Paralelismo"
+>>>>>>> Stashed changes
             }
           }
         ],
@@ -87,7 +95,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
+              "title": "Files"
             }
           },
           {
@@ -203,20 +211,27 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "79db58225e5754d9",
   "lastOpenFiles": [
+<<<<<<< Updated upstream
     "Tema 3 Sincronización.md",
     "Tema 1 Paralelismo.md",
     "Tema 2 Introducción a concurrencia.md",
+=======
+    "Numba Cuda.md",
+>>>>>>> Stashed changes
     "JVM.md",
+    "Tema 2 Introducción a concurrencia.md",
+    "Tema 1 Paralelismo.md",
+    "Tema 3 Sincronización.md",
     "Temas 11-13 Nvidia Cuda.md",
     "Tema 10 Numba y Cython.md",
     "files/Pasted image 20250524165759.png",
@@ -225,7 +240,6 @@
     "files",
     "files/Pasted image 20250523174203.png",
     "files/Pasted image 20250523173808.png",
-    "Numba Cuda.md",
     "files/Pasted image 20250523164921.png"
   ]
 }
