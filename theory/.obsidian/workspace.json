@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tema 2 Introducción a concurrencia.md",
+                "file": "JVM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tema 2 Introducción a concurrencia"
+              "title": "JVM"
             }
           }
         ],
@@ -213,9 +213,9 @@
   },
   "active": "79db58225e5754d9",
   "lastOpenFiles": [
+    "Tema 3 Sincronización.md",
     "Tema 1 Paralelismo.md",
     "Tema 2 Introducción a concurrencia.md",
-    "Tema 3 Sincronización.md",
     "JVM.md",
     "Temas 11-13 Nvidia Cuda.md",
     "Tema 10 Numba y Cython.md",
