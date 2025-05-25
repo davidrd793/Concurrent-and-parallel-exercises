@@ -1,19 +1,33 @@
-# Concurrent-and-parallel-exercises
-A collection of resources focused on Concurrent and Parallel Computing from a beginner friendly perspective. 
+# Ejercicios de Computación Concurrente y Paralela
 
-# What is included in this repository?
-This repository is meant to be an accesible tool to learn and understand the basics of Parallel and Concurrent Computing, including:
-- Theory-focused documents in markdown format (Obsidian recommended).
-- Both finished code as well as unfinished code to practice the concepts.
-- Exercise proposals to ensure that the expected level of proficiency on key aspects of the discipline.
+Una colección de recursos centrados en la Computación Concurrente y Paralela desde una perspectiva amigable para principiantes.
 
-# What techonologies/libraries/APIs is this repository going to focus on?
-This repository will include 3 differents approachs of Parallel and Concurrent Computing technologies:
-- Java Threads
-- MPI on Python
-- NVIDIA CUDA on Python
+---
 
-This implies that, in order to experience the full "course", besides having a CPU with enough compute capability to do Concurrent Computing (duh), it's almost mandatory to have an NVidia GPU for the last part of the repository (there is actually a way to avoid this requirement, which involves coding in Google Colaboratory, but we arent pretty fond of what it involves) (we're sorry)
+## ¿Qué incluye este repositorio?
 
-# Final message: Thank u!
-This is a work-in-progress with a lot of progress left and almost not work at all, but we hope someone will find this helpful one day, so we are glad to help you if thats your case!
+Este repositorio está pensado como una herramienta accesible para aprender y comprender los fundamentos de la Computación Paralela y Concurrente, incluyendo:
+
+- Documentos teóricos en formato Markdown (se recomienda usar Obsidian).
+- Código tanto terminado como sin terminar para practicar los conceptos.
+- Propuestas de ejercicios para asegurar el nivel de dominio esperado en aspectos clave de la disciplina.
+
+---
+
+## ¿En qué tecnologías/librerías/APIs se enfoca este repositorio?
+
+Este repositorio incluirá tres enfoques distintos de tecnologías de Computación Concurrente y Paralela:
+
+- Hilos en Java (`Java Threads`)
+- MPI en Python
+- NVIDIA CUDA en Python
+
+Esto implica que, para experimentar el "curso" completo, además de contar con una CPU con capacidad suficiente para realizar Computación Concurrente (obvio), es casi obligatorio tener una GPU de NVIDIA para la última parte del repositorio.  
+(Hay una forma de evitar este requisito, que implica programar en Google Colaboratory, pero no somos muy fans de lo que eso conlleva, lo sentimos).
+
+---
+
+## Mensaje final: ¡Gracias!
+
+Este es un proyecto en proceso, con mucho progreso por delante y casi ningún trabajo hecho aún, pero esperamos que a alguien le resulte útil algún día.  
+¡Nos alegra poder ayudarte si ese es tu caso!
