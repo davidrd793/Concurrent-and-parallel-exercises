@@ -1,6 +1,7 @@
-/*Un método útil es join, que hace que el hilo que llama al método espere hasta que el hilo indicado termine su ejecución.
+/*
+ * Un método útil es join, que hace que el hilo que llama al método espere hasta que el hilo indicado termine su ejecución.
  * Se usa a menudo para hacer que el hilo principal termine después de que lo hagan sus hilos hijo
- */
+*/
 
 class Ej05_Joins {
     public static void main(String[] args) {

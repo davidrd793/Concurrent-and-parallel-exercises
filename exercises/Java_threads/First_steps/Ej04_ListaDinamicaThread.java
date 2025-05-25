@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Iterator;
-/*En ciertas ocasiones, es beneficioso usar arrays dinámicos para esto, lo que se hace de la siguiente manera */
+import java.util.List;
+
+//En ciertas ocasiones, es beneficioso usar arrays dinámicos (permiten redimensionar su tamaño)para esto, lo que se hace de la siguiente manera
 
 class Ej04_ListaDinamicaThread {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ class Ej04_ListaDinamicaThread {
             threadList.add(new Thread(new HilosDinamicos()));
         } 
 
-        //Iterator para recorrer la lista rellenada y comenzar los threads
+        // Iterator es una forma más flexible de recorrer un estructura de elementos
         Iterator<Thread> l1 = threadList.iterator();
         while (l1.hasNext()) {
             l1.next().start();

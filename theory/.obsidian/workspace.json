@@ -1,28 +1,14 @@
 {
   "main": {
-    "id": "e8e82c6c778a31dd",
+    "id": "f85fd029b35b97f1",
     "type": "split",
     "children": [
       {
-        "id": "7e654275bc3f905a",
+        "id": "5c5e3f6526c84b50",
         "type": "tabs",
         "children": [
           {
-            "id": "3535badd252ac534",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tema 2 Introducción a concurrencia.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Tema 2 Introducción a concurrencia"
-            }
-          },
-          {
-            "id": "ab3d62d948926687",
+            "id": "fddaf5c2340d58b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,59 +20,22 @@
               "icon": "lucide-file",
               "title": "Tema 3 Sincronización"
             }
-          },
-          {
-            "id": "abaa31a69c26a1e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tema 2 Introducción a concurrencia.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Tema 2 Introducción a concurrencia"
-            }
-          },
-          {
-            "id": "79db58225e5754d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-<<<<<<< Updated upstream
-                "file": "JVM.md",
-=======
-                "file": "Tema 1 Paralelismo.md",
->>>>>>> Stashed changes
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-<<<<<<< Updated upstream
-              "title": "JVM"
-=======
-              "title": "Tema 1 Paralelismo"
->>>>>>> Stashed changes
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "59d4948917358a82",
+    "id": "1816b79a72d37fc3",
     "type": "split",
     "children": [
       {
-        "id": "390fe7383bef0451",
+        "id": "31e69ab15320a0ae",
         "type": "tabs",
         "children": [
           {
-            "id": "e759383c8877f3e0",
+            "id": "cbaa78d3864a4536",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -95,11 +44,11 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
-            "id": "5a13f83741232141",
+            "id": "340d66c93d2f6c31",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -116,7 +65,7 @@
             }
           },
           {
-            "id": "4b2a0793bcad436d",
+            "id": "a616fdc05a3ea822",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -132,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "93aa77f56d79a3d0",
+    "id": "139d61a79facd668",
     "type": "split",
     "children": [
       {
-        "id": "795af90a3894e135",
+        "id": "a91cb911b770e07a",
         "type": "tabs",
         "children": [
           {
-            "id": "0956d874bfaac659",
+            "id": "fdfe1f91c6a64519",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Temas 11-13 Nvidia Cuda.md",
+                "file": "Tema 3 Sincronización.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Temas 11-13 Nvidia Cuda"
+              "title": "Enlaces entrantes de Tema 3 Sincronización"
             }
           },
           {
-            "id": "70af9d8f7bb7a33c",
+            "id": "ea6b15ca1e6b1898",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Temas 11-13 Nvidia Cuda.md",
+                "file": "Tema 3 Sincronización.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de Temas 11-13 Nvidia Cuda"
+              "title": "Enlaces salientes de Tema 3 Sincronización"
             }
           },
           {
-            "id": "7f8bd98ffa7d762b",
+            "id": "717ae295a6160512",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -188,18 +137,18 @@
             }
           },
           {
-            "id": "541f1cf04fe6e2e3",
+            "id": "17c1a93fb86316ff",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Temas 11-13 Nvidia Cuda.md",
+                "file": "Tema 3 Sincronización.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Temas 11-13 Nvidia Cuda"
+              "title": "Esquema de Tema 3 Sincronización"
             }
           }
         ]
@@ -211,35 +160,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "79db58225e5754d9",
+  "active": "fddaf5c2340d58b4",
   "lastOpenFiles": [
-<<<<<<< Updated upstream
-    "Tema 3 Sincronización.md",
-    "Tema 1 Paralelismo.md",
-    "Tema 2 Introducción a concurrencia.md",
-=======
-    "Numba Cuda.md",
->>>>>>> Stashed changes
-    "JVM.md",
     "Tema 2 Introducción a concurrencia.md",
     "Tema 1 Paralelismo.md",
-    "Tema 3 Sincronización.md",
-    "Temas 11-13 Nvidia Cuda.md",
-    "Tema 10 Numba y Cython.md",
-    "files/Pasted image 20250524165759.png",
-    "files/Pasted image 20250523175729.png",
-    "files/Pasted image 20250523175344.png",
-    "files",
-    "files/Pasted image 20250523174203.png",
-    "files/Pasted image 20250523173808.png",
-    "files/Pasted image 20250523164921.png"
+    "Tema 3 Sincronización.md"
   ]
 }

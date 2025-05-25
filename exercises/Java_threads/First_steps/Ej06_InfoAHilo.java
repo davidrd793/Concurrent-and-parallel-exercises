@@ -1,6 +1,7 @@
-/*A la hora de aplicar estos conocimientos a un ejercicio útil, lo más normal es que sea necesario pasarle datos a hilos para que los manejen.
+/*
+ * A la hora de aplicar estos conocimientos a un ejercicio útil, lo más normal es que sea necesario pasarle datos a hilos para que los manejen.
  * Esto es un proceso que se puede hacer tanto mediante Inyección por Constructor como Métodos setter 
- */
+*/
 
 class Ej06_InfoAHilo {
     public static void main(String[] args) {
