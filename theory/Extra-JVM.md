@@ -10,13 +10,13 @@ Java tiene un fuerte soporte para la programación concurrente a través de hilo
         
 2. **Gestión de Hilos por la JVM:**
     
-    - **Estados de los Hilos:** La JVM mantiene el estado de cada hilo (NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED).
+    - *Estados de los Hilos*: La JVM mantiene el estado de cada hilo (NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED).
         
-    - **Stack por Hilo:** Como mencionamos, cada hilo obtiene su propio **Java Stack**. Esto es fundamental porque permite que cada hilo tenga su propio flujo de ejecución independiente, con sus propias variables locales y secuencia de llamadas a métodos.
+    - *Stack por Hilo*: Como mencionamos, cada hilo obtiene su propio **Java Stack**. Esto es fundamental porque permite que cada hilo tenga su propio flujo de ejecución independiente, con sus propias variables locales y secuencia de llamadas a métodos.
         
-    - **Lista de Threads Activos (o Pool de Hilos):** La JVM internamente mantiene un registro de todos los hilos que ha creado y que están activos (es decir, que no han terminado su ejecución). Cuando dices "lista de threads activos", te refieres a esta contabilidad interna. Los hilos en estado RUNNABLE son los que están listos para ser seleccionados por el planificador para ejecutar.
+    - *Lista de Threads Activos (o Pool de Hilos):* La JVM internamente mantiene un registro de todos los hilos que ha creado y que están activos (es decir, que no han terminado su ejecución). Cuando dices "lista de threads activos", te refieres a esta contabilidad interna. Los hilos en estado RUNNABLE son los que están listos para ser seleccionados por el planificador para ejecutar.
         
-    - **Planificación de Hilos (Thread Scheduling):**
+    - *Planificación de Hilos (Thread Scheduling):*
         
         - **Planificación Automática (y Delegada):** La JVM delega la mayor parte de la planificación de hilos al **sistema operativo subyacente**. El planificador del SO decide qué hilo RUNNABLE obtiene tiempo de CPU y por cuánto tiempo (esto se llama timeslicing). Esto es lo que se entiende por "planificación automática": el programador Java no controla directamente los ciclos de CPU asignados a cada hilo.
             

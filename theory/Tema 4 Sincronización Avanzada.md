@@ -4,7 +4,7 @@ Una vez vistas las primitivas básicas para controlar las secciones críticas, p
 
 ---
 ## Monitores
-**Idea**: ofrecer coordinación de hilos y eliminar el problema de `espera activa` mediante la suspensión temporal de hilos (pasan a estado WAITING) mediante wait() hasta ser notificados por notify(), notifyAll(), normalmente desde otro hilo.
+**Idea**: ofrecer coordinación de hilos y eliminar el problema de `espera activa` mediante la suspensión temporal de hilos (pasan a estado WAITING y liberan el bloqueo del objeto) mediante wait() hasta ser notificados por notify(), notifyAll(), normalmente desde otro hilo.
 
 ![[Pasted image 20250525174430.png]]
 
@@ -19,6 +19,11 @@ Utilizaremos bloques 'synchronized' para que el hilo obtenga el bloqueo del obje
 
 #### Monitores con *Lock* PENDIENTE
 Al igual que los locks eran mejores que los bloques synchronized en cuanto a exclusión mutua, tambien son más completos a la hora de realizar monitores con ellos, tanto por las razones ya vistas como porque permiten manejar mejor las [señales perdidas] y [despertares espurios].
+Al igual que usabamos 'Object' para el uso de .wait()/.notify() ahora utilizaremos el objeto Condition, que posee los métodos .await()/.signall() para el mismo propósito, pero teniendo las ventajas de lock y permitiendo separar la lógica de sincronización de la lógica de señalización.
+
+``` Java
+Condition miCondicion = new lock.newCondition();
+```
 
 
 #### Problemas a enfrentar
@@ -33,3 +38,53 @@ Este manejo de condiciones puede organizarse de distintas formas para realizar d
 
 ###### Productor consumidor
 Arquitectura clásica en diversos problemas en que ambos hilos se comunican mediante un buffer de datos (uno "produce" y añade datos al buffer y el otro los elimina). La exclusión mutua es necesaria para evitar corrupción del buffer, mientras que las variables condicionales de control sirven para evitar que el productor añada algo cuando el buffer está lleno o el consumidor tome algo si el buffer está vacío (los induce a estado WAITING).
+
+--- 
+
+## Más mecanismos de sinc. complejos
+
+###### Semaphores
+- Controlan el acceso a una sección crítica, pero permitiendo el paso de n hilos en vez de "uno a la vez" como en el caso de los mutexes. Funcionan ed forma similar a lock() pero con un número de permisos determinado:
+
+``` Java
+Semaphore miSemaforo = new Semaphore(3); // 3 hilos pueden entrar
+
+semaphore.acquire();
+// Some code
+semaphore.release();
+
+
+```
+
+###### CountDownLatch
+- Contador múltiple que detiene la ejecución de hilos en un punto hasta que se reduzca el contador a 0:
+
+```Java
+CountDownLatch miLatch = new CountDownLatch(n); //requiere n hilos
+latch.await(); // Se detiene la ejecución
+
+class MiThread extends Thread {
+	//Code
+	miLatch.countDwn(); //Reduce 1 el contador (n-1)
+	//COde
+}
+```
+
+###### Cyclic Barrier
+- Barrera que detiene a los hilos hasta que hayan llegado a ella n hilos para "pasarla":
+
+``` Java
+CyclicBarrier miBarrier = new CyclicBarrier(4);
+
+class miThread extends Thread {
+	//Code
+	miBarrier.await() //Detiene aqui hasta uqe llegaran 4 hilos
+	// Code
+}
+```
+
+###### Exchanger
+- Para realizar intercambios de datos entre dos hilos, si uno llega al punto antes que otro, este espera hasta que el otro llegue al punto para realizar el intercambio.
+
+## Productor consumidor con mecanismos avanzados
+- Veremos como, aplicando *semáforos*, podemos crear un modelo productor-consumidor en el que se puede producir/consumir más de un elemento por unidad de tiempo.
