@@ -88,3 +88,10 @@ class miThread extends Thread {
 
 ## Productor consumidor con mecanismos avanzados
 - Veremos como, aplicando *semáforos*, podemos crear un modelo productor-consumidor en el que se puede producir/consumir más de un elemento por unidad de tiempo.
+
+IMPORTANTE: no se utiliza un semáforo estricto de Java en ninguno, se utiliza un semáforo específico diseñado para tomar valor 0 o 1 y tener métodos .up() y .down() que veremos en ejercicios.
+
+###### Modelo de cambio de estados
+- Utiliza un 'semProd' y un 'semCon' para forzar alternancia entre productor y consumidor, ideal para modelos de 1 productor y consumidor -> Ver ejemplos prácticos.
+###### Enfoque con semáforos de conteo
+
