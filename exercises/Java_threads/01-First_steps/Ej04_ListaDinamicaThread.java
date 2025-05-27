@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.List;
+import java.util.Iterator;
 
 //En ciertas ocasiones, es beneficioso usar arrays dinámicos (permiten redimensionar su tamaño)para esto, lo que se hace de la siguiente manera
 
