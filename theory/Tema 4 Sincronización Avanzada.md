@@ -19,7 +19,7 @@ Utilizaremos bloques 'synchronized' para que el hilo obtenga el bloqueo del obje
 
 #### Monitores con *Lock* PENDIENTE
 Al igual que los locks eran mejores que los bloques synchronized en cuanto a exclusión mutua, tambien son más completos a la hora de realizar monitores con ellos, tanto por las razones ya vistas como porque permiten manejar mejor las [señales perdidas] y [despertares espurios].
-Al igual que usabamos 'Object' para el uso de .wait()/.notify() ahora utilizaremos el objeto Condition, que posee los métodos .await()/.signall() para el mismo propósito, pero teniendo las ventajas de lock y permitiendo separar la lógica de sincronización de la lógica de señalización.
+Al igual que usabamos 'Object' para el uso de .wait()/.notify() ahora utilizaremos el objeto Condition, que posee los métodos .await()/.signal() para el mismo propósito, pero teniendo las ventajas de lock y permitiendo separar la lógica de sincronización de la lógica de señalización.
 
 ``` Java
 Condition miCondicion = new lock.newCondition();

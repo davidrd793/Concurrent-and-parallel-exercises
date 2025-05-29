@@ -43,3 +43,37 @@ Los executors pueden tener un número estático o dinámico de hilos, estos son 
 > Nota: esta organización que aprovecha el polimorfismo aprovecha el patrón Factory Method, lo cual simplifica la adición e implementación al máximo.
 
 ## Future y Callable
+Hasta ahora, hemos implementado threads por Runnable o Thread, pero a veces requerimos que nuestros hilos no solo ejecuten una serie de instrucciones, sino que devuelvan un resultado, el método void run() debe no devolver nada, pero existe una alternativa para lograrlo:
+
+###### Callable
+Interfaz de igual implementación que Runnable, que permite la devolución de un valor y que *puede ser implementado a executors en su método .submit()*. Dado que las tareas Callable se mandan a un executor y estas se ejecutan de manera asíncrona, debemos definir un objeto especial que reciba el valor de retorno o detenga al programa esperando por el.
+
+```Java
+public class CallableExample {
+	ExecutorService ex = new Executors.newSingleThreadExecutor();
+
+	Callable<Integer> task = () -> {
+		Thread.sleep(1000);
+		return(1);
+	}
+
+	Future<Integer> future = ex.submit(task);
+	Integer result = future.get(); //Blocked there until callable task is done
+
+	// Do something with result
+}
+```
+
+###### Future
+Interfaz que permite obtener el resultado de la tarea asíncrona lanzada por Callable.
+
+``` Java
+
+// Métodos
+
+Future<Integer> future = executor.submit(someTask);
+
+Ingeter returned = future.get(); //Espera al retorno del valor
+future.cancell(); // Cancela la tarea asíncrona
+bool state = future.isCancelled()
+```

@@ -31,9 +31,9 @@ Describe las tareas como flujo de datos y flujo de instrucciones:
 - *Memoria distribuida* -> sistemas multicomputador.
 
 ## Paradigmas de programación paralela
-Enfoques conceptuales para el diseño de programas paralelos y su ejecución (realmente todos los temas del curso van sobre ver los 3 tipos de paradigmas, te odio Leandro aprende a redactar).
+Enfoques conceptuales para el diseño de programas paralelos y su ejecución.
 
-**Paralelismo en datos**: la tarea es ejecutada de forma secuencial, se optimiza la velocidad mediante el paralelismo en el cálculo (en la ejecución de operaciones sobre los datos). Respecto a Flynn, se corresponderia con SIMD o incluso MIMD. -> Nvidia Cuda y lanzamiento de cálculo a GPU.
+**Paralelismo en datos**: la tarea es ejecutada de forma secuencial, se optimiza la velocidad mediante el paralelismo en el cálculo (en la ejecución de operaciones sobre los datos). Respecto a Flynn, se correspondería con SIMD o incluso MIMD. -> Nvidia Cuda y lanzamiento de cálculo a GPU.
 **Memoria compartida**: la tarea es ejecutada en múltiples threads, que comparten direcciones en memoria. Encaja con tareas MIMD. -> Concurrencia
 **Paso de mensajes**: la tarea es ejecutada en en varios procesos (memoria independiente), por lo que se gestiona el intercambio de mensajes entre procesos. -> MPI.
 

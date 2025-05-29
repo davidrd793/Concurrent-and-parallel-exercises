@@ -8,7 +8,7 @@ Ocurren principalemente entorno a la *memoria compartida*.
 **Condiciones de carrera**: cuando varios hilos leen y modifican el mismo dato, pueden solapar su ejecución y leer datos erróneos.
 **Deadlocks**: cuando se cruzan dos necesidades de hilos bloqueandose mutuamente de forma indefinida. Soluciones: aplicar tryLocks() o hacer bloqueos en orden no cruzado.
 **Coordinación de hilos**: gestión de dependencias entre threads.
-**Sobrecarga de rendimiento**: la creación/destrucción de hilos así como el uso de mecanismos de espera afecta a los beneficios del paralelismo y pueden reducir la rentabilidad de trabajar concurrentemente. 
+**Sobrecarga de rendimiento**: la creación/destrucción de hilos así como el uso de mecanismos de espera afecta a los beneficios del paralelismo y pueden reducir la rentabilidad de trabajar concurrentemente. Veremos tambien los 'executors', un mecanismo de gestión optimizada de threads en siguientes temas.
 
 ---
 # Mecanismo vs Primitiva de sincronización
@@ -82,4 +82,4 @@ Es una instrucción atómica que lee 3 valores:
  - El valor esperado (A)
  - El valor nuevo (B)
 De esta forma, el valor de V se actualiza a B solo si el valor que lee es A (es decir, si otro thread no lo ha cambiado), en caso contrario vuelve a empezar la comprobación.
-Sus mayores desafíos son la gestión del problema ABA y el spin-waiting.
+Sus mayores desafíos son la gestión del *problema ABA* y el *spin-waiting*.
