@@ -8,14 +8,14 @@ comm = MPI.COMM_WORLD
 rank = comm.rank
 num_processes = comm.size
 
-
-if (rank == 0):
-    data = np.array([1, 2], dtype=np.int32)
-else:
-    data = np.empty(2, dtype=np.int32)
-
-
-comm.Bcast(data, root=0)
+data = np.array([rank], dtype=np.int32) #IMPORTANTE: En una operación Reduce() tambien participa el proceso root
 
 if (rank != 0):
-    print("Soy el proceso %d y he recibido: ", data, rank)
+    buffer = None
+else:
+    buffer = np.empty(1, dtype=np.int32)
+
+comm.Reduce(data, buffer, op=MPI.SUM, root=0)
+
+if (rank == 0):
+    print("Mis datos tras el reduce son: ", buffer)

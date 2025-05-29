@@ -1,23 +1,22 @@
-// Voy por aqui para mañana 
+class SharedResource {    
+    
+    public synchronized void methodOne(String name) { //Una forma seria implementar aquí sun método synchronized, pero tambien se puede meter la llamada en un bloque
+        System.out.println("Thread " + name + " is entering the Task");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {}
 
-class SharedResource {       
-    /* 
-        ADD CODE:    A synchronized block or method
-        methodOne()  
-        1.  prints Name of the current thread
-         2.  Sleeps for 2000 ms
-         3.  prints message that current thread is done 
+        System.out.println("Thread " + name + " has completed his task");
+    }
 
-    */
-       
-    /* 
-        ADD CODE:   A synchronized block or method
-        methodTwo()  
-        1.  prints Name of the current thread
-         2.  Sleeps for 2000 ms
-         3.  prints message that current thread is done 
+        public synchronized void methodTwo(String name) {
+        System.out.println("Thread " + name + " is entering the Task");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {}
 
-    */
+        System.out.println("Thread " + name + " has completed his task");
+    }
 }
 
 class MyTaskThread extends Thread {
@@ -32,9 +31,9 @@ class MyTaskThread extends Thread {
     @Override
     public void run() {
         if (runFirstMethod) {
-            sharedResource.methodOne();
+            sharedResource.methodOne(Thread.currentThread().getName());
         } else {
-            sharedResource.methodTwo();
+            sharedResource.methodTwo(Thread.currentThread().getName());
         }
     }
 }

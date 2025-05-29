@@ -1,23 +1,37 @@
-package code;
 import java.util.ArrayList;
 import java.util.List;
+
 // version 1
 class SynchronizedMethodList {
     private List<Integer> list = new ArrayList<>();
 
-    /*
-        ADD CODE:   Add the synchronized methods
-    */ 
+    public synchronized void addElement(int number) {
+        list.add(number);
+    }
 
+    public synchronized void getElement(int number) {
+        int result = list.get(number);
+        System.out.println(result + " has been taked from method list");
+    }
 }
 // version 2
 class SynchronizedBlockList {
     private List<Integer> list = new ArrayList<>();
     private final Object lock = new Object();
 
-    /*
-        ADD CODE:    Add the methods with synchronized blocks
-     */
+    
+    public void addElement(int number) {
+        synchronized(lock) {
+            list.add(number);
+        }
+    }
+
+    public void getElement(int number) {
+        synchronized(lock) {
+            int result = list.get(number);
+            System.out.println(result + " has been taked from method list");
+        }
+    }
 }
 
 
