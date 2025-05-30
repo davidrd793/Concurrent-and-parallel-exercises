@@ -1,31 +1,32 @@
-package code;
 import java.util.LinkedList; 
 
 class SharedBuffer {
     private LinkedList<Integer> buffer = new LinkedList<>();
     private int capacity = 10;
 
+    public synchronized void add(int value) {
+        while(buffer.size() == capacity) {
+            try {
+                wait();
+            } catch (InterruptedException e) {}
+        
+        buffer.add(value);
+        notifyAll();
+        }
+    }
 
-    /*
-     *  ADD CODE:   Write the "add" method that receives 'value'
-     *      make the method synchronized
-     *      it should wait if the buffer is full (at capacity); 
-     *      otherwise it should add value to the buffer then 
-     *      notify the rest of the threads.
-     * 
-    */
-
-
-    /*
-     *  ADD CODE:   Write the "remove" method.  
-     *      make the method synchronized
-     *      it would wait if the buffer is empty, but otherwise it 
-     *      should remove the first element of the buffer
-     *      after that, it would notify other threads that it is 
-     *      finished.
-     */
-
-
+    public synchronized int remove() {
+        while (buffer.isEmpty()) {
+            try {
+                wait(); 
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+        int value = buffer.removeFirst(); //IMPORTANTE: Los arrays estáticos tienen el método removeFirst() para actuar como una queue
+        notifyAll();
+        return value;
+    }
 }
 
 
@@ -39,12 +40,7 @@ class Producer extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 50; i++) {
-            try {
-                buffer.add(i);
-            } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+            buffer.add(i);
             System.out.println("Produced: " + i);
         }
     }
@@ -62,12 +58,7 @@ class Consumer extends Thread {
     public void run() {
         for (int i = 0; i < 50; i++) {
           int value;
-        try {
             value = buffer.remove();
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
           StringBuilder stringBuilder = new StringBuilder();
           System.out.println("Consumed: " + value);
         }
@@ -75,7 +66,7 @@ class Consumer extends Thread {
 }
 
 
-public class lab2prob13 {
+public class ProdCons_metodo {
     public static void main(String[] args) {
         SharedBuffer buffer = new SharedBuffer();
         Producer producer = new Producer(buffer);

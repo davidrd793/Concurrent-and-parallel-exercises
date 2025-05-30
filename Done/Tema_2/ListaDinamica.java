@@ -10,7 +10,7 @@ class MyThread extends Thread {
         System.out.println("Finalizado el proceso " + this.getName());
     }
 }
-public class lab1prog09B {
+public class ListaDinamica {
     public static void main(String[] args) {
         final int NUMERO_THREADS = 5;
         List<Thread> threadList = new ArrayList<>(NUMERO_THREADS);

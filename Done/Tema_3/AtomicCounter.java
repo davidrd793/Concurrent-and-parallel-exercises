@@ -1,5 +1,7 @@
 
-// Este otro logra un sharedCounter sincronizando las llamadas a .increment() mediante synchronized().
+// Este primer ejercicio implementa un SharedCounter con variables atómicas y AtomicInteger
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 class CounterThread extends Thread {
     private SharedCounter sharedCounter;
@@ -11,9 +13,7 @@ class CounterThread extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 1000; i++) {
-            synchronized(sharedCounter) {
-                sharedCounter.increment();
-            }
+            sharedCounter.increment();
         }
     }
 }
@@ -21,20 +21,20 @@ class CounterThread extends Thread {
 
 
 class SharedCounter {
-    private int count = 0; //IMPORTANTE: Crear un AtomicInteger es una instancia de clase y debe ser declarada con 'newa'
+    private AtomicInteger count = new AtomicInteger(0); //IMPORTANTE: Crear un AtomicInteger es una instancia de clase y debe ser declarada con 'newa'
     
     
     public void increment() {
-        count++;
+        count.incrementAndGet();
     }
 
 
-    public int getCount() {
+    public AtomicInteger getCount() {
         return count;
     }
 }
 
-public class lab2prob04B {
+public class AtomicCounter {
     public static void main(String[] args) throws InterruptedException {
         SharedCounter sharedCounter = new SharedCounter();
         Thread[] threads = new Thread[10];
@@ -51,3 +51,4 @@ public class lab2prob04B {
         System.out.println("Final Counter Value: " + sharedCounter.getCount());
     }
 }
+

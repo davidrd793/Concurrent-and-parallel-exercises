@@ -31,7 +31,7 @@ class NewThread implements Runnable {
     }
 }
 
-class lab1prog08 {
+class ListaEstatica {
     public static void main(String[] args) {
         NewThread[] threads = new NewThread[5];
         

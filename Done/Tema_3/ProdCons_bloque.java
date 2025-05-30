@@ -1,44 +1,32 @@
-package code;
 import java.util.LinkedList; 
-
 
 class SharedBuffer {
     private LinkedList<Integer> buffer = new LinkedList<>();
     private int capacity = 10;
 
-
-
-    /*
-     *  ADD CODE:   Write the "add" method that receives 'value'
-     *      use a synchronized block
-     *      it should wait if the buffer is full (at capacity); 
-     *      otherwise it should add value to the buffer then 
-     *      notify the rest of the threads.
-     * 
-    */
-
-
-    /*
-     *  ADD CODE:   Write the "remove" method.  
-     *      use a synchronized block
-     *      it would wait if the buffer is empty, but otherwise it 
-     *      should remove the first element of the buffer
-     *      after that, it would notify other threads that it is 
-     *      finished.
-     */
-
-
+    public void add(int value) {
+        synchronized(this) {
+            while(buffer.size() == capacity) {
+                try {
+                    wait();
+                } catch (InterruptedException e) {}
+            
+            buffer.add(value);
+            notifyAll();
+            }
+        }
+    }
 
     public int remove() {
         synchronized (this) {
             while (buffer.isEmpty()) {
                 try {
-                    wait(); // Busy-waiting when buffer is empty
+                    wait(); 
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }
             }
-            int value = buffer.removeFirst();
+            int value = buffer.removeFirst(); //IMPORTANTE: Los arrays estáticos tienen el método removeFirst() para actuar como una queue
             notifyAll();
             return value;
         }
@@ -79,7 +67,7 @@ class Consumer extends Thread {
 }
 
 
-public class lab2prob12 {
+public class ProdCons_bloque {
     public static void main(String[] args) {
         SharedBuffer buffer = new SharedBuffer();
 

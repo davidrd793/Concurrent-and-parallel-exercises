@@ -1,4 +1,4 @@
-public class lab1prog01 {
+public class DatosThread {
     public static void main(String[] args) {
         printThreadDetails();
     }

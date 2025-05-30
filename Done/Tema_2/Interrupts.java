@@ -15,7 +15,7 @@ class MyInterruptThread implements Runnable {
 }
 
 
-public class lab1prog11 {
+public class Interrupts {
     public static void main(String[] args) throws InterruptedException {
         Thread myThread = new Thread(new MyInterruptThread(), "myThread");
         myThread.start();

@@ -25,15 +25,18 @@ class FirstThread extends Thread {
     }
 
     void firstCoffee() {
-        if (sharedResource.flag) {
-            try {
-                sharedResource.lock.wait();
-            } catch (InterruptedException e) {}
-        }
-        System.out.println("Thread FirstCoffee is making coffee " + iInteger);
-        iInteger++;
-        //Al terminar notifica al otro hilo
-        sharedResource.flag = true;
+        synchronized(sharedResource.lock) {
+             while (sharedResource.flag) {
+                try {
+                    sharedResource.lock.wait();
+                } catch (InterruptedException e) {}
+            }
+            System.out.println("Thread FirstCoffee is making coffee " + iInteger);
+            iInteger++;
+            //Al terminar notifica al otro hilo
+            sharedResource.flag = true;
+            sharedResource.lock.notifyAll();
+        }   
         
     }
 }
@@ -47,8 +50,8 @@ class SecondThread extends Thread {
 
     @Override
     public void run() {
-        secondCoffee();
         while(true) {
+            secondCoffee();
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {}
@@ -56,7 +59,17 @@ class SecondThread extends Thread {
     }
 
     void secondCoffee() {
-        System.out.println("Thread SecondCoffee is making coffee ");
+        synchronized(sharedResource.lock) {
+            while (!sharedResource.flag) {
+                try {
+                    sharedResource.lock.wait();
+                } catch (InterruptedException e) {}
+            }
+            System.out.println("Thread SecondCoffee is making coffee ");
+            
+            sharedResource.flag = false;
+            sharedResource.lock.notifyAll();
+        }
     }
 }
 public class MakingCoffee {
@@ -64,7 +77,7 @@ public class MakingCoffee {
         SharedResource sr = new SharedResource();
         System.out.println("Coffee maker:");
         Thread a = new FirstThread(sr);
-        Thread b = new FirstThread(sr);
+        Thread b = new SecondThread(sr);
         a.start();
         b.start();
 
