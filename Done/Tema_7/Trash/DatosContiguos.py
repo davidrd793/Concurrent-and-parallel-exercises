@@ -9,22 +9,16 @@ num_processes = comm.size
 
 # Los datos contiguos requieren una dirección de inicio y la cantidad de datos a tomar.
 
-if (num_processes != 2):
-    print("tonto")
-    exit(1)
-
-start_index = 1 * 10 +2
-#IMPORTANTE: Crear el patrón y commitearlo
-pattern = MPI.INT32_T.Create_contiguous(count=6)
+pattern = MPI.INT32_T.Create_contiguous(count = 6)
 pattern.Commit()
 
-
-if (rank == 1):
-    total_data = np.arange(40, dtype=np.int32).reshape(4, 10)
-    
-    #Debemoss modificar el envío
-    comm.Send([total_data, start_index, pattern], dest=0, tag=500)
+if rank == 0:
+    data = np.arange(36, dtype=np.int32).reshape(6, 6)
+    print("Array on sender: ")
+    print(data)
+    print()
+    comm.Send([data, (1, 2), pattern], dest = 1) #IMPORTANTE: (1, 2) indica 1 bloque en la posición 2 (6x2 en este caso)
 else:
-    buffer = np.empty(40, dtype=np.int32).reshape(4, 10)
-    comm.Recv([buffer, start_index, pattern], source=1, tag=500)
-    print("He recibido: ", buffer)
+    buffer = np.zeros(36, dtype=np.int32).reshape(6, 6) #IMPOORTANTE: Usar np.zeros mejor para evitar errores raros
+    comm.Recv([buffer, (1, 1), pattern])
+    print(buffer)

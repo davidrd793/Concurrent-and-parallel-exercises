@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "790a92b13f87d901",
+        "id": "0ff93b1f99c8721e",
         "type": "tabs",
         "children": [
           {
-            "id": "a3e80fe96dd2bec7",
+            "id": "3b4dbf315905eee3",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -164,10 +164,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a3e80fe96dd2bec7",
+  "active": "3b4dbf315905eee3",
   "lastOpenFiles": [
+    "Tema 13 Neural Nets.md",
     "Tema 5 Sincronización avanzada II.md",
-    "Temas 11-13 Nvidia Cuda.md",
+    "Temas 11-12 Nvidia Cuda.md",
     "Tema 7 MPI Avanzado.md",
     "files/Pasted image 20250529213635.png",
     "files/Pasted image 20250529212856.png",
