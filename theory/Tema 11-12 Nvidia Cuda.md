@@ -50,6 +50,16 @@ Arquitectura de última generación basada en el uso de Tensor Cores, unidades c
 Mejoran el cálculo intensivo, vitales para Deep Learning y Redes Neuronales.
 
 #### Coalescencia
+Los half-warps poseen una característica muy importante a tener en cuenta, cuando todos los hilos de un half-warps acceden a posiciones seguidas de la memoria en memoria global, esta se realiza mediante un solo acceso. Con esto, tenemos que, realizar nuestros programas para aprovechar la coalescencia puede mejorar significativamente las prestaciones, solo mediante el control de los idx de cada thread:
+
+![[Pasted image 20250601105233.png]]
+En la imagen podemos ver como el primer ejemplo supone un *acceso divergente* de los hilos de un mismo half-warp y por tanto no coalescente (hilo con idx-1 no accede a una posición en memoria seguida de la posición de memoria del dato que accede el thread con idx-2).
+El segundo ejemplo produce que todos los threads de un mismo warp sigan el mismo flujo de programa y, por tanto, todos los threads de un half-warp toman la misma dirección accediendo a posiciones seguidas de memoria.
+
+> Una técnica utilizada es el apoyo en memoria compartida para realizar transacciones no-coalescentes, esto debido a que realizar la copia a memoria compartida de las operaciones de forma no-coalescente en dicha memoria resulta mucho menos costoso en tiempo que la no coalescencia en memoria global.
+
+#### Acceso a bancos de memoria
+Dentro de la *shared memory*, la información se encuentra organizada en bancos (una memoria compartida se divide típicamente en 32 bancos)
 
 
 #### Definiciones:

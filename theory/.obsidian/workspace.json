@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0ff93b1f99c8721e",
+        "id": "d9b7ea8abde03636",
         "type": "tabs",
         "children": [
           {
-            "id": "3b4dbf315905eee3",
+            "id": "3e14898b5cc0efe7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Tema 11-12 Nvidia Cuda.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Tema 11-12 Nvidia Cuda"
             }
           }
         ]
@@ -164,16 +168,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3b4dbf315905eee3",
+  "active": "3e14898b5cc0efe7",
   "lastOpenFiles": [
+    "files/Pasted image 20250601105233.png",
+    "Pasted image 20250601105233.png",
+    "Tema 8-9 MPI Avanzado.md",
+    "Tema 10 Numba y Cython.md",
     "Tema 13 Neural Nets.md",
+    "files/Pasted image 20250531165638.png",
     "Tema 5 Sincronización avanzada II.md",
-    "Temas 11-12 Nvidia Cuda.md",
-    "Tema 7 MPI Avanzado.md",
+    "Tema 11-12 Nvidia Cuda.md",
     "files/Pasted image 20250529213635.png",
     "files/Pasted image 20250529212856.png",
     "files/Pasted image 20250529212836.png",
-    "Tema 6 MPI Básico.md",
+    "Tema 7 MPI Básico.md",
     "files/Pasted image 20250528194955.png",
     "Tema 4 Sincronización Avanzada.md",
     "Tema 3 Sincronización Básica.md",
@@ -184,9 +192,7 @@
     "Numba Cuda.md",
     "Extra-Estructuras de datos.md",
     "Extra-JVM.md",
-    "Tema 10 Numba y Cython.md",
     "files/Pasted image 20250526161510.png",
-    "files/Pasted image 20250526160858.png",
-    "files/Pasted image 20250525174430.png"
+    "files/Pasted image 20250526160858.png"
   ]
 }

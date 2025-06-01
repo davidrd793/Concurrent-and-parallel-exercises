@@ -13,7 +13,8 @@ Refiriendonos a como extraemos la esencia (las características) de los datos, p
 - **Función de activación**: un nodo supone una combinación lineal sobre los datos de entrada, la función de activación es aplicada al resultado de esta para introducir *no linealidad* al modelo y que este tenga la capacidad de aprender, son comunes *ReLu* (impide valores negativos) o *Sigmoid* (devuelve probabilidades, entre 0 y 1) entre otras.
 - **Modelo Dense**: modelo en que las capas están totalmente conectadas, cada output se da a todos los inputs de todos los nodos de la siguiente capa.
 - **Overfitting**: situación en que un modelo ha aprendido demasiado bien los casos de ejemplo y ha perdido la capacidad de "extraer los patrones subyacentes al dominio", por lo que no sabe *generalizar* y solo da bien los casos de ejemplo. 
-
+- **Mínimos locales**: la función de pérdida para los posibles ajustes de *pesos* y *vías* pueden representarse como un espacio n-dimensional y pueden darse casos de mínimos locales, es decir, una configuración que alcanza un valor mínimo respecto a sus adyacentes para la pérdida pero que no es el mínimo global. Para manejarlos y salir de ellos, podemos utilizar técnicas como *Adam* o *RMSProp*.
+- **Fine-tunning**: técnica que consiste en utilizar un modelo entrenado en una tarea grande y aplicarlo sobre conjuntos más específicos para mejorar us eficacia.
 ## Una Red Neuronal Simple
 Veremos de forma simplificada, los *pasos a seguir* para crear una red neuronal básica.
 
@@ -68,9 +69,24 @@ model.fit(x_train, y_train, epochs=10, validation_data=[x_valid, y_valid])
 ## Redes neuronales Convolucionales (CNNs)
 Tipo especial de red neuronal con buen desempeño en análisis de imágenes y visión artificial basadas en *capas de convolución*.
 
-- **Convolución**: #Pendiente
+- **Convolución**: operación matemática para obtener patrones locales de una entrada aplicando filtros para modificar los datos, en CNNs se aplica una *capa de convolución* en que se aplican estos filtros (llamados kernels) a la entrada por partes pequeñas, facilitando la extracción de patrones.
+
+###### Fases de un modelo con CNNs
+1. Cargado de los datos y preprocesamiento (añadir padding, padding="same" añade zero_padding)
+2. Creación del modelo
+3. Compilado
+4. Entrenamiento
 
 
 ## Data augmentation
-#Pendiente
+Es una técnica muy utilizada en Deep Learning que consiste en la introducción artificial de muestras con variabilidad sobre las muestras originales, de esta forma aumentamos la cantidad de datos a analizar y evitamos el overfitting sobre los datos de entrenamiento.
+
+###### Fases de un modelo con data augmentation
+1. Preparación de los datos y preprocesado
+2. Creación del modelo 
+3. Generación de imágenes nuevas (keras trae un método predefinido)
+4.  Compilación del modelo
+5. Entrenamiento iterativo
+
+![[Pasted image 20250531165638.png]]
 
